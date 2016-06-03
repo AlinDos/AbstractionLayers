@@ -2,6 +2,12 @@
 var http = require('http'),
     fs = require('fs');
 
+// Task # 6 Configure ---------------------------------------------------------
+const configure = {
+  PORT: 8080,
+  HOST: '127.0.0.1'
+}
+
 // ----------------------------------------------------------------------------
 // Cache
 var cache = {};
@@ -131,5 +137,4 @@ var server = http.createServer ((req, res) => {
   }
 });
 
-// Task #6 Configuring --------------------------------------------------------
-server.listen (80, '127.0.0.1');
+server.listen (configure.PORT, configure.HOST);
